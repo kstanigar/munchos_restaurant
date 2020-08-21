@@ -70,6 +70,7 @@
             height: 100vh;
             position: fixed;
             background: linear-gradient(to bottom, rgba($color-dark, 0.7), rgba($color-black, 0.7)), url('../images/bg-image-1.jpeg') center no-repeat;
+            background-size: cover;
             background-color: #1f1d1d;
             right: -50vw;
             @include flexLayout;
@@ -90,7 +91,7 @@
 
             &-link {
                 font-family: $font-dancingScript;
-                font-size: 50px;
+                font-size: 100px;
                 @include textStyles(capitalize);
                 color: $color-secondary;
                 text-decoration: none;
@@ -102,6 +103,10 @@
                 &:hover {
                     color: $color-primary;
                     letter-spacing: 4px;
+                }
+                
+                @media(max-width: 2560px) {
+                    font-size: 50px;
                 }
 
                 @media(max-width: 600px) {
@@ -229,8 +234,12 @@
         }
 
         .star {
-            width: 15px;
+            width: 22px;
             margin-left: 10px;
+            
+            @media(max-width: 2560px) {
+                width: 15px;
+            }
 
             @media(max-width: 1000px) {
                 width: 12px;
@@ -239,15 +248,22 @@
 
         .description {
             font-family: $font-josefinSans;
-            font-size: 25px;
+            font-size: 40px;
             font-style: italic;
             font-weight: 300;
             color: $color-secondary;
+            width: 70%;
             text-align: justify;
-            line-height: 30px;
+            line-height: 48px;
 
             &::first-letter {
                 padding-left: 50px;
+            }
+            
+            @media(max-width: 2560px) {
+                font-size: 25px;
+                line-height: 30px;
+                width: 100%;
             }
 
             @media(max-width: 1600px) {
@@ -290,9 +306,13 @@
 
     .social-media {
         display: flex;
-        width: 300px;
+        width: 500px;
         justify-content: space-between;
         margin-bottom: 70px;
+        
+        @media(max-width: 2560px) {
+            width: 300px;
+        }
 
         @media(max-width: 500px) {
             width: 200px;
@@ -305,8 +325,16 @@
 
         &-link {
             text-decoration: none;
-            font-size: 50px;
+            font-size: 70px;
             color: $color-secondary;
+            
+            @media(max-width: 2560px) {
+                font-size: 50px;
+            }
+            
+            @media(max-width: 1000px) {
+                font-size: 35px;
+            }
 
             @media(max-width: 500px) {
                 font-size: 25px;
@@ -329,9 +357,13 @@
 
     &-copyright-paragraph {
         font-family: $font-josefinSans;
-        font-size: 18px;
+        font-size: 24px;
         color: $color-primary;
         @include textStyles(capitalize);
+        
+        @media(max-width: 2560px) {
+            font-size: 18px;
+        }
 
         @media(max-width: 800px) {
             width: 70%;

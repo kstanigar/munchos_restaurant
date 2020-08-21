@@ -1,10 +1,15 @@
 .hamburger-menu {
-    width: 33px;
-    height: 33px;
+    width: 99px;
+    height: 99px;
     position: fixed;
     top: 7%;
     right: 5%;
     z-index: 300;
+    
+    @media(max-width: 2560px) {
+        width: 33px;
+        height: 33px;
+    }
 
     @media(max-width: 800px) {
         width: 33px;
@@ -18,8 +23,8 @@
 
     .menu::after {
         content: "";
-        height: 45px;
-        width: 45px;
+        height: 135px;
+        width: 135px;
         background-color: $color-secondary;
         position: absolute;
         border-radius: 50%;
@@ -27,6 +32,12 @@
         transform: scale(0.1) translate(-20%);
         transition: transform 1s,
             opacity 500ms;
+        
+        @media(max-width: 2560px) {
+            height: 45px;
+            width: 45px;
+        }
+        
     }
 
     .menu {
@@ -59,12 +70,17 @@
 
 .logo {
     color: $color-primary;
-    width: 110px;
-    height: 110px;
+    width: 200px;
+    height: 200px;
     border: 3px solid $color-primary;
     border-radius: 50%;
     @include flexLayout;
     margin-right: 20px;
+    
+    @media(max-width: 2560px) {
+        width: 110px;
+        height: 110px;
+    }
 
     @media(max-width: 1000px) {
         width: 90px;
@@ -84,9 +100,13 @@
 
 .main-name {
     font-family: $font-nunito;
-    font-size: 50px;
+    font-size: 80px;
     color: $color-secondary;
     @include textStyles;
+    
+    @media(max-width: 2560px) {
+        font-size: 50px;
+    }
 
     @media(max-width: 1000px) {
         font-size: 40px;
@@ -100,10 +120,14 @@
 
 .sub-name {
     font-family: $font-josefinSans;
-    font-size: 18px;
+    font-size: 30px;
     color: $color-secondary;
     text-align: center;
     @include textStyles;
+    
+    @media(max-width: 2560px) {
+        font-size: 18px;
+    }
 
     @media(max-width: 500px) {
         font-size: 15px;
@@ -113,10 +137,14 @@
 
 .main-heading {
     font-family: $font-dancingScript;
-    font-size: 100px;
+    font-size: 200px;
     font-weight: 300;
     color: $color-primary;
     margin-bottom: 40px;
+    
+    @media(max-width: 2560px) {
+        font-size: 100px;
+    }
 
     @media(max-width: 1600px) {
         font-size: 80px;
@@ -134,11 +162,15 @@
 
 .sub-heading {
     font-family: $font-josefinSans;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 300;
     color: $color-secondary;
     margin-bottom: 80px;
     text-align: center;
+    
+    @media(max-width: 2560px) {
+        font-size: 60px;
+    }
 
     @media(max-width: 1600px) {
         font-size: 50px;
@@ -161,19 +193,26 @@
 }
 
 .main-btn {
-    width: 170px;
-    height: 45px;
+    width: 300px;
+    height: 110px;
     font-family: $font-josefinSans;
-    font-size: 14px;
+    font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $color-primary;
     background-color: #000;
     border: 1px solid $color-primary;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
     transition: all 0.4s;
     animation: neon 12s infinite;
+    
+    @media(max-width: 2560px) {
+        width: 170px;
+        height: 45px;
+        font-size: 14px;
+    }
 
     @media(max-width: 900px) {
         width: 150px;
@@ -195,10 +234,10 @@
 }
 
 .secondary-btn {
-    width: 170px;
-    height: 45px;
+    width: 290px;
+    height: 110px;
     font-family: $font-josefinSans;
-    font-size: 14px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #000;
@@ -207,6 +246,12 @@
     outline: none;
     cursor: pointer;
     transition: all 0.4s;
+    
+    @media(max-width: 2560px) {
+        width: 170px;
+        height: 45px;
+        font-size: 14px;
+    }
 
     @media(max-width: 900px) {
         width: 150px;
@@ -251,8 +296,12 @@
 
         &-heading {
             font-family: $font-nunito;
-            font-size: 50px;
+            font-size: 80px;
             @include textStyles(capitalize);
+            
+            @media(max-width: 2560px) {
+                font-size: 50px;
+            }
 
             @media(max-width: 1060px) {
                 font-size: 35px;
@@ -275,9 +324,13 @@
 
         &-paragraph {
             font-family: $font-josefinSans;
-            font-size: 30px;
+            font-size: 50px;
             margin-bottom: 30px;
             @include textStyles(capitalize);
+            
+            @media(max-width: 2560px) {
+                font-size: 30px;
+            }
 
             @media(max-width: 900px) {
                 font-size: 20px;
@@ -293,11 +346,11 @@
         }
 
         &-btn {
-            padding: 15px 50px;
             color: #000;
             background-color: $color-white;
             font-family: $font-josefinSans;
-            font-size: 14px;
+            padding: 20px 60px;
+            font-size: 22px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 1px solid $color-primary;
@@ -310,15 +363,21 @@
                 color: $color-primary;
                 background-color: #000;
             }
-
-            @media(max-width: 900px) {
-                font-size: 12px;
+            
+            @media(max-width: 2560px) {
+                padding: 15px 50px;
+                font-size: 14px;
                 padding: 12px 35px;
             }
 
+            @media(max-width: 900px) {
+                padding: 12px 35px;
+                font-size: 12px;
+            }
+
             @media(max-width: 715px) {
-                font-size: 10px;
                 padding: 10px 30px;
+                font-size: 10px;
             }
         }
     }
